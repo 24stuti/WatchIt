@@ -1,0 +1,176 @@
+/* Footer Styling */
+.footer {
+    width: 100%;
+    background: #111;
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+/* Footer Container */
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: auto;
+    padding-bottom: 20px;
+}
+
+/* Footer Sections */
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin-bottom: 20px;
+    text-align: left;
+    transform: translateY(20px);
+    opacity: 0;
+    animation: slideIn 0.8s ease-in-out forwards;
+}
+
+/* Animated Fade-in Effect for Sections */
+@keyframes slideIn {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.footer-section h3 {
+    font-size: 18px;
+    margin-bottom: 12px;
+    color: #e50914;
+    position: relative;
+}
+
+/* Hover Underline Effect */
+.footer-section h3::after {
+    content: '';
+    width: 50px;
+    height: 3px;
+    background: #e50914;
+    display: block;
+    margin-top: 5px;
+    transition: width 0.3s ease-in-out;
+}
+
+.footer-section h3:hover::after {
+    width: 100%;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 8px 0;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover Slide Effect */
+.footer-section ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    display: inline-block;
+}
+
+.footer-section ul li a:hover {
+    color: #e50914;
+    transform: translateX(5px);
+}
+
+/* Contact Info */
+.footer-section p {
+    margin: 5px 0;
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 15px;
+    max-width: 1100px;
+    margin: auto;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+/* Social Icons */
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icon {
+    color: white;
+    font-size: 22px;
+    transition: transform 0.3s ease, color 0.3s;
+    animation: bounceIn 1s ease-in-out;
+}
+
+/* Icon Hover Animation */
+.social-icon:hover {
+    transform: scale(1.2) rotate(10deg);
+    color: #e50914;
+}
+
+/* Keyframes for Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.7;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-section {
+        text-align: center;
+    }
+}

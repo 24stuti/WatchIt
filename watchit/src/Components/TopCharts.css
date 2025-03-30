@@ -1,0 +1,108 @@
+.top-charts {
+    padding: 20px;
+  }
+  
+  .section-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  
+  .category-section {
+    position: relative;
+    margin-bottom: 30px;
+  }
+  
+  .category-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  
+  .chart-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .chart-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 10px;
+    padding: 10px;
+    scrollbar-width: none;
+  }
+  
+  .chart-container::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .chart-card {
+    position: relative;
+    min-width: 160px;
+    height: 240px;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  
+  .chart-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 6px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+  }
+  
+  /* Arrow Button */
+  .scroll-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 6px;
+    border-radius: 50%;
+    font-size: 14px;
+    display: none;
+  }
+  
+  /* Show Arrows on Hover */
+  .category-section:hover .scroll-btn {
+    display: block;
+  }
+  
+  .scroll-btn.left {
+    left: -30px;
+  }
+  
+  .scroll-btn.right {
+    right: -30px;
+  }
+  
+  .divider-line {
+    margin-top: 15px;
+    border: none;
+    height: 2px;
+    background: #ddd;
+    width: 100%;
+  }
+  
