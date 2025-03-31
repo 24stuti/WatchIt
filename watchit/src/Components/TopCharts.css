@@ -1,77 +1,95 @@
 .top-charts {
     padding: 20px;
-  }
-  
-  .section-title {
+}
+
+.section-title {
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 15px;
-  }
-  
-  .category-section {
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.category-section {
     position: relative;
     margin-bottom: 30px;
-  }
-  
-  .category-title {
-    font-size: 18px;
+}
+
+.category-title {
+    font-size: 20px;
     font-weight: bold;
     margin-bottom: 10px;
     display: flex;
     align-items: center;
     gap: 6px;
-  }
-  
-  .chart-wrapper {
+    color: #ffcc00;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.chart-wrapper {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-  }
-  
-  .chart-container {
+}
+
+.chart-container {
     display: flex;
     overflow-x: auto;
     scroll-behavior: smooth;
-    gap: 10px;
+    gap: 20px;
     padding: 10px;
     scrollbar-width: none;
-  }
-  
-  .chart-container::-webkit-scrollbar {
+}
+
+.chart-container::-webkit-scrollbar {
     display: none;
-  }
-  
-  .chart-card {
+}
+
+.chart-card {
     position: relative;
-    min-width: 160px;
-    height: 240px;
-    border-radius: 8px;
+    min-width: 240px;
+    height: 160px;
+    border-radius: 12px;
     overflow: hidden;
     cursor: pointer;
-  }
-  
-  .chart-card img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    background: linear-gradient(135deg, #1f1c2c, #928dab);
+}
+
+.chart-card:hover {
+    transform: scale(1.08);
+    box-shadow: 0px 10px 20px rgba(255, 255, 255, 0.3);
+}
+
+.chart-card img {
     width: 100%;
-    height: 100%;
+    height: 80%;
     object-fit: cover;
     border-radius: 8px;
-  }
-  
-  .overlay {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    padding: 6px;
-    text-align: center;
-    background: rgba(0, 0, 0, 0.7);
-    color: white;
-    font-size: 12px;
+}
+
+/* Name Below Image */
+.chart-title {
+    margin-top: 8px;
+    font-size: 16px;
     font-weight: bold;
-  }
-  
-  /* Arrow Button */
-  .scroll-btn {
+    text-align: center;
+    color: #fff;
+    transition: color 0.3s ease-in-out;
+}
+
+.chart-card:hover .chart-title {
+    color: #ffcc00;
+}
+
+/* Arrow Button */
+.scroll-btn {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -79,30 +97,35 @@
     color: white;
     border: none;
     cursor: pointer;
-    padding: 6px;
+    padding: 10px;
     border-radius: 50%;
-    font-size: 14px;
+    font-size: 18px;
+    transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
     display: none;
-  }
-  
-  /* Show Arrows on Hover */
-  .category-section:hover .scroll-btn {
+}
+
+.scroll-btn:hover {
+    background: #ffcc00;
+    transform: scale(1.2);
+}
+
+/* Show Arrows on Hover */
+.category-section:hover .scroll-btn {
     display: block;
-  }
-  
-  .scroll-btn.left {
+}
+
+.scroll-btn.left {
     left: -30px;
-  }
-  
-  .scroll-btn.right {
+}
+
+.scroll-btn.right {
     right: -30px;
-  }
-  
-  .divider-line {
+}
+
+.divider-line {
     margin-top: 15px;
     border: none;
     height: 2px;
     background: #ddd;
     width: 100%;
-  }
-  
+}

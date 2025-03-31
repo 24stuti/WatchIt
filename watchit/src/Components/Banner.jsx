@@ -1,22 +1,24 @@
 import React, { useState, useEffect } from "react";
-import { FaVolumeMute, FaVolumeUp } from "react-icons/fa";
+import { FaVolumeMute, FaVolumeUp, FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import "./Banner.css";
 
 const banners = [
   {
     title: "Trending Now",
-    description: "Watch the latest blockbuster hits.",
-    video: "https://www.w3schools.com/html/mov_bbb.mp4",
+    description: "Bhool Chuk Maaf is romantic comedy directed by Karan Sharma.The film explores the humorous complexities of relationships, set against the vibrant backdrop of Varanasi. Release date:May 9, 2025 ",
+    video: "./images/Bhool Chuk Maaf _ Official Teaser _ Rajkummar R _ Wamiqa G _ Dinesh V _ Karan S _ 10th April 2025.mp4",
   },
   {
     title: "Top Picks for You",
-    description: "Enjoy personalized recommendations.",
-    video: "https://www.w3schools.com/html/movie.mp4",
+    description: `Sikandar revolves around Raja Sahab, played by Salman Khan, who is the last heir of the royal family of Rajkot.
+    Release date:30 March 2025`,
+    video: "./images/SIKANDAR Official Trailer - Salman Khan, Rashmika _ Sajid Nadiadwala _ A.R. Murugadoss _ 30th March.mp4",
   },
   {
     title: "New Releases",
-    description: "Catch the newest movies and shows.",
-    video: "https://www.w3schools.com/html/mov_bbb.mp4",
+    description: `Raid 2 focuses on IRS officer Amay Patnaik who has seized over 4200 crores in his raids' till then, tracks another white-collar crime.
+    Release date:1 May 2025. `,
+    video: "./images/RAID 2.mp4",
   },
 ];
 
@@ -27,30 +29,43 @@ const Banner = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % banners.length);
-    }, 10000); // Change every 10 seconds
+    }, 20000); // Change every 20 seconds
 
     return () => clearInterval(interval);
   }, []);
 
+  // Function to manually switch banners
+  const handleNext = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % banners.length);
+  };
+
+  const handlePrev = () => {
+    setCurrentIndex((prevIndex) => (prevIndex - 1 + banners.length) % banners.length);
+  };
+
   return (
     <div className="banner-container">
       <div className="banner">
-        <video
-          className="banner-video"
-          src={banners[currentIndex].video}
-          autoPlay
-          loop
-          muted={isMuted}
-        ></video>
+        {/* Video */}
+        <video className="banner-video" src={banners[currentIndex].video} autoPlay loop muted={isMuted}></video>
 
+        {/* Overlay Content */}
         <div className="banner-overlay">
-          <h1>{banners[currentIndex].title}</h1>
-          <p>{banners[currentIndex].description}</p>
+          <h1 className="banner-title">{banners[currentIndex].title}</h1>
+          <p className="banner-description">{banners[currentIndex].description}</p>
         </div>
 
         {/* Mute/Unmute Button */}
         <button className="mute-btn" onClick={() => setIsMuted(!isMuted)}>
           {isMuted ? <FaVolumeMute /> : <FaVolumeUp />}
+        </button>
+
+        {/* Navigation Arrows */}
+        <button className="prev-btn" onClick={handlePrev}>
+          <FaArrowLeft />
+        </button>
+        <button className="next-btn" onClick={handleNext}>
+          <FaArrowRight />
         </button>
 
         {/* Dots Indicator */}

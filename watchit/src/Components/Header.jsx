@@ -1,5 +1,6 @@
 import React from "react";
 import "./Header.css";
+import ProfileDropdown from "./ProfileDropdown";
 import { FaHome, FaTv, FaFilm, FaSearch, FaUserCircle } from "react-icons/fa";
 
 const NavItem = ({ icon, text }) => {
@@ -14,7 +15,9 @@ const NavItem = ({ icon, text }) => {
 const Header = () => {
   return (
     <header className="header">
-      <div className="logo">WatchIt</div>
+      <div className="logo">
+        <img src="./images/logo.jpeg" alt="WatchIt Logo" className="logo-img" />
+      </div>
 
       <nav className="nav">
         <NavItem icon={<FaHome className="nav-icon" />} text="Home" />
@@ -27,7 +30,7 @@ const Header = () => {
         <input type="text" placeholder="Search..." className="search-input" />
       </div>
 
-      <FaUserCircle className="profile-icon" />
+      <ProfileDropdown />
     </header>
   );
 };

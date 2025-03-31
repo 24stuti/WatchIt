@@ -43,6 +43,56 @@ body {
     transition: opacity 1s ease-in-out;
 }
 
+/* OVERLAY TEXT */
+.banner-overlay {
+    position: absolute;
+    bottom: 20%;
+    left: 5%;
+    color: white;
+    z-index: 10;
+}
+
+.banner-title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.banner-description {
+    font-size: 1.2rem;
+    max-width: 500px;
+    line-height: 1.5;
+}
+
+/* NAVIGATION BUTTONS */
+.prev-btn,
+.next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    padding: 12px;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background 0.3s ease-in-out;
+}
+
+.prev-btn:hover,
+.next-btn:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.prev-btn {
+    left: 20px;
+}
+
+.next-btn {
+    right: 20px;
+}
+
 /* MUTE/UNMUTE BUTTON */
 .mute-btn {
     position: absolute;
@@ -86,6 +136,47 @@ body {
     transform: scale(1.2);
 }
 
+/* PROFILE DROPDOWN - ALIGN TO SCREEN */
+.profile-dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: black;
+    border-radius: 5px;
+    width: 180px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    padding: 10px 0;
+    display: none;
+}
+
+.profile-dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown-menu li {
+    padding: 10px 15px;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.dropdown-menu li:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
 /* RESPONSIVE */
 @media (max-width: 768px) {
     .mute-btn {
@@ -93,4 +184,22 @@ body {
         right: 15px;
         font-size: 1.2rem;
     }
+
+    .banner-title {
+        font-size: 2rem;
+    }
+
+    .banner-description {
+        font-size: 1rem;
+    }
+
+    .prev-btn,
+    .next-btn {
+        font-size: 1.5rem;
+        padding: 8px;
+    }
+}
+
+.banner-description {
+    white-space: pre-line; /* Maintains line breaks */
 }

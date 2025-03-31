@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 import "./TopCharts.css";
 import { motion } from "framer-motion";
 import { Play, Film, Tv, Clapperboard, ChevronLeft, ChevronRight } from "lucide-react";
@@ -11,16 +11,16 @@ const categories = [
 
 const topData = {
   "TV Shows": [
-    { title: "Sacred Games", img: "/sacredgames.jpg" },
-    { title: "Mirzapur", img: "/mirzapur.jpg" },
-    { title: "Panchayat", img: "/panchayat.jpg" },
-    { title: "Asur", img: "/asur.jpg" },
-    { title: "The Family Man", img: "/familyman.jpg" },
-    { title: "Scam 1992", img: "/scam1992.jpg" },
-    { title: "Kota Factory", img: "/kotafactory.jpg" },
-    { title: "Aspirants", img: "/aspirants.jpg" },
-    { title: "Delhi Crime", img: "/delhicrime.jpg" },
-    { title: "Jamtara", img: "/jamtara.jpg" },
+    { title: "Sacred Games", img: "./images/TVShows/sacred-games.webp" },
+    { title: "Mirzapur", img: "./images/TVShows/Mirzapur.jpg" },
+    { title: "Panchayat", img: "./images/TVShows/panchayat.webp" },
+    { title: "Asur", img: "./images/TVShows/asur.webp" },
+    { title: "The Family Man", img: "./images/TVShows/familyMan.jpg" },
+    { title: "Scam 1992", img: "./images/TVShows/scam1992.webp" },
+    { title: "Kota Factory", img: "./images/TVShows/kotafactory.jpeg" },
+    { title: "Aspirants", img: "./images/TVShows/aspirants.webp" },
+    { title: "Delhi Crime", img: "./images/TVShows/delhicrime.jpg" },
+    { title: "Jamtara", img: "./images/TVShows/jamtara.jpg" },
   ],
   "Movies": [
     { title: "Animal", img: "/animal.jpg" },
@@ -55,80 +55,40 @@ const TopCharts = () => {
     "Trailers": useRef(null),
   };
 
-  const [scrollState, setScrollState] = useState({
-    "TV Shows": { atStart: true },
-    "Movies": { atStart: true },
-    "Trailers": { atStart: true },
-  });
-
   const scrollLeft = (category) => {
     const container = scrollRefs[category].current;
     container.scrollBy({ left: -300, behavior: "smooth" });
-
-    setTimeout(() => {
-      setScrollState((prev) => ({
-        ...prev,
-        [category]: { atStart: container.scrollLeft - 300 <= 0 },
-      }));
-    }, 300);
   };
 
   const scrollRight = (category) => {
     const container = scrollRefs[category].current;
     container.scrollBy({ left: 300, behavior: "smooth" });
-
-    setScrollState((prev) => ({
-      ...prev,
-      [category]: { atStart: false },
-    }));
   };
 
   return (
     <div className="top-charts">
       <h2 className="section-title">🔥 Top Charts</h2>
-
       {categories.map((category) => (
         <div key={category.name} className="category-section">
-          {/* Category Title */}
           <h3 className="category-title">
             {category.icon} {category.name}
           </h3>
-
           <div className="chart-wrapper">
-            {/* Left Arrow Button (Hidden on First Page) */}
-            {!scrollState[category.name].atStart && (
-              <button className="scroll-btn left" onClick={() => scrollLeft(category.name)}>
-                <ChevronLeft size={20} />
-              </button>
-            )}
-
-            {/* Horizontal Scrolling List */}
-            <motion.div
-              ref={scrollRefs[category.name]}
-              className="chart-container"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-            >
+            <button className="scroll-btn left" onClick={() => scrollLeft(category.name)}>
+              <ChevronLeft size={20} />
+            </button>
+            <motion.div ref={scrollRefs[category.name]} className="chart-container">
               {topData[category.name].map((item, index) => (
-                <motion.div
-                  key={index}
-                  className="chart-card"
-                  whileHover={{ scale: 1.1 }}
-                >
+                <motion.div key={index} className="chart-card" whileHover={{ scale: 1.1 }}>
                   <img src={item.img} alt={item.title} />
-                  <div className="overlay">{item.title}</div>
+                  <p className="chart-title">{item.title}</p> {/* 🎯 Yaha Title add kiya */}
                 </motion.div>
               ))}
             </motion.div>
-
-            {/* Right Arrow Button */}
             <button className="scroll-btn right" onClick={() => scrollRight(category.name)}>
               <ChevronRight size={20} />
             </button>
           </div>
-
-          {/* Divider Line */}
           <hr className="divider-line" />
         </div>
       ))}
