@@ -1,15 +1,17 @@
 .top-charts {
     padding: 20px;
+    background: #0d0d0d; /* Dark Cinematic Look */
 }
 
 .section-title {
-    font-size: 24px;
+    font-size: 26px;
     font-weight: bold;
     margin-bottom: 15px;
     text-align: center;
-    color: #fff;
+    color: #b388ff; /* Purple Neon */
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 1.2px;
+    text-shadow: 0px 0px 12px rgba(179, 136, 255, 0.7);
 }
 
 .category-section {
@@ -18,14 +20,20 @@
 }
 
 .category-title {
-    font-size: 20px;
+    font-size: 22px;
     font-weight: bold;
     margin-bottom: 10px;
     display: flex;
     align-items: center;
-    gap: 6px;
-    color: #ffcc00;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    gap: 8px;
+    color: #d0a6ff; /* Soft Purple */
+    text-shadow: 3px 3px 6px rgba(208, 166, 255, 0.6);
+    transition: all 0.3s ease-in-out;
+}
+
+.category-title:hover {
+    transform: scale(1.05);
+    color: #c27bff;
 }
 
 .chart-wrapper {
@@ -39,8 +47,8 @@
     display: flex;
     overflow-x: auto;
     scroll-behavior: smooth;
-    gap: 20px;
-    padding: 10px;
+    gap: 22px;
+    padding: 12px;
     scrollbar-width: none;
 }
 
@@ -50,42 +58,51 @@
 
 .chart-card {
     position: relative;
-    min-width: 240px;
-    height: 160px;
-    border-radius: 12px;
+    min-width: 260px; /* Slightly Bigger */
+    height: 180px;
+    border-radius: 14px;
     overflow: hidden;
     cursor: pointer;
     display: flex;
     flex-direction: column;
     align-items: center;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    background: linear-gradient(135deg, #1f1c2c, #928dab);
+    background: linear-gradient(135deg, #212121, #3a3a3a); /* Dark Mode */
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
 }
 
+/* Glow Effect on Hover */
 .chart-card:hover {
     transform: scale(1.08);
-    box-shadow: 0px 10px 20px rgba(255, 255, 255, 0.3);
+    box-shadow: 0px 12px 22px rgba(179, 136, 255, 0.4);
+    background: linear-gradient(135deg, #3a3a3a, #b388ff);
 }
 
 .chart-card img {
     width: 100%;
     height: 80%;
     object-fit: cover;
-    border-radius: 8px;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
 }
 
-/* Name Below Image */
+.chart-card:hover img {
+    transform: scale(1.05);
+}
+
+/* Movie Name Styling */
 .chart-title {
     margin-top: 8px;
-    font-size: 16px;
+    font-size: 17px;
     font-weight: bold;
     text-align: center;
-    color: #fff;
+    color: #ffffff;
+    text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.3);
     transition: color 0.3s ease-in-out;
 }
 
 .chart-card:hover .chart-title {
-    color: #ffcc00;
+    color: #b388ff;
 }
 
 /* Arrow Button */
@@ -93,19 +110,19 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(179, 136, 255, 0.3);
     color: white;
     border: none;
     cursor: pointer;
-    padding: 10px;
+    padding: 12px;
     border-radius: 50%;
-    font-size: 18px;
+    font-size: 20px;
     transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
     display: none;
 }
 
 .scroll-btn:hover {
-    background: #ffcc00;
+    background: #b388ff;
     transform: scale(1.2);
 }
 
@@ -115,17 +132,18 @@
 }
 
 .scroll-btn.left {
-    left: -30px;
+    left: -35px;
 }
 
 .scroll-btn.right {
-    right: -30px;
+    right: -35px;
 }
 
 .divider-line {
     margin-top: 15px;
     border: none;
     height: 2px;
-    background: #ddd;
+    background: #b388ff;
     width: 100%;
+    box-shadow: 0px 0px 8px rgba(179, 136, 255, 0.6);
 }
