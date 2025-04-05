@@ -35,3 +35,10 @@
   .dropdown-menu li:hover {
     background-color: #430452;
   }
+
+  .username {
+    margin-left: 8px;
+    font-weight: bold;
+    color: white;
+  }
+  

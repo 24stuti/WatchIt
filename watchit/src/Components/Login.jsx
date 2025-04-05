@@ -20,13 +20,14 @@ const Login = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const storedUser = JSON.parse(localStorage.getItem("user"));
+    const storedUser = JSON.parse(localStorage.getItem("username"));
 
     if (
       storedUser &&
       loginData.email === storedUser.email &&
       loginData.password === storedUser.password
     ) {
+      localStorage.setItem("username", storedUser.username);
       alert("Login successful! ✅");
       navigate("/");
     } else {

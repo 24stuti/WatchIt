@@ -22,7 +22,7 @@ const SignUp = () => {
     e.preventDefault();
 
     // Save to localStorage
-    localStorage.setItem("user", JSON.stringify(formData));
+    localStorage.setItem("username", JSON.stringify(formData));
 
     alert("Signup successful! 🎉");
     navigate("/");
