@@ -1,4 +1,4 @@
-.movies-page {
+.tvshows-page {
     padding: 2rem;
     background-color: #0d0d0d; /* Match TopChart background */
     min-height: 100vh;
@@ -12,13 +12,13 @@
     text-shadow: 0px 0px 12px rgba(179, 136, 255, 0.7); /* Match TopChart */
   }
   
-  .movie-grid {
+  .tv-grid {
     display: grid;
     grid-template-columns: repeat(4, minmax(220px, 1fr));
     gap: 25px;
   }
   
-  .movie-card {
+  .tv-card {
     background: linear-gradient(135deg, #212121, #3a3a3a); /* Cinematic dark */
     border-radius: 12px;
     box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1); /* Soft shadow */
@@ -28,19 +28,19 @@
     color: white;
   }
   
-  .movie-card:hover {
+  .tv-card:hover {
     transform: scale(1.08);
-    box-shadow: 0px 12px 22px rgba(179, 136, 255, 0.4); /* Purple glow on hover */
-    background: linear-gradient(135deg, #3a3a3a, #b388ff); /* Match TopChart hover bg */
+    box-shadow: 0px 12px 22px rgba(179, 136, 255, 0.4); /* Purple glow */
+    background: linear-gradient(135deg, #3a3a3a, #b388ff); /* Hover gradient */
   }
   
-  .movie-card img {
+  .tv-card img {
     width: 100%;
     height: 220px;
     object-fit: fill;
   }
   
-  .movie-title {
+  .tv-title {
     padding: 12px;
     font-weight: bold;
     font-size: 1.1rem;
@@ -48,7 +48,7 @@
     text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.3);
   }
   
-  .movie-card:hover .movie-title {
+  .tv-card:hover .tv-title {
     color: #04000b; /* Same hover title color as TopChart */
   }
   

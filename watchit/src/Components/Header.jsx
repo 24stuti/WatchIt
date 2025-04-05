@@ -17,13 +17,17 @@ const Header = () => {
   const navigate = useNavigate();
   return (
     <header className="header">
-      <div className="logo">
+      <div className="logo" onClick={() => navigate("/")}>
         <img src="./images/logo.jpeg" alt="WatchIt Logo" className="logo-img" />
       </div>
 
       <nav className="nav">
-        <NavItem icon={<FaHome className="nav-icon" />} text="Home" />
-        <NavItem icon={<FaTv className="nav-icon" />} text="TV" />
+      <div onClick={() => navigate("/")}>
+          <NavItem icon={<FaHome className="nav-icon" />} text="Home" />
+        </div>
+        <div onClick={() => navigate("/tvshows")}>
+          <NavItem icon={<FaTv className="nav-icon" />} text="TV" />
+        </div>
         <div onClick={() => navigate("/movies")}>
           <NavItem icon={<FaFilm className="nav-icon" />} text="Movies" />
         </div>
