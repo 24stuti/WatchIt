@@ -1,8 +1,9 @@
 import React from "react";
 import "./Header.css";
 import ProfileDropdown from "./ProfileDropdown";
-import { FaHome, FaTv, FaFilm, FaSearch, FaUserCircle } from "react-icons/fa";
+import { FaHome, FaTv, FaFilm, FaSearch} from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
+import MovieRecommender from "./MovieRecommender";
 
 const NavItem = ({ icon, text }) => {
   return (
@@ -37,7 +38,7 @@ const Header = () => {
         <FaSearch className="search-icon" />
         <input type="text" placeholder="Search..." className="search-input" />
       </div>
-
+      <MovieRecommender />
       <ProfileDropdown />
     </header>
   );
