@@ -1,0 +1,137 @@
+<preferences>
+  <!-- NCR Region -->
+  <location name="ncr"><movie>Article 370</movie><movie>Crew</movie></location>
+  <location name="delhi"><movie>Pink</movie><movie>Article 15</movie></location>
+  <location name="new delhi"><movie>Dunki</movie><movie>12th Fail</movie></location>
+  <location name="gurugram"><movie>Fighter</movie><movie>Sam Bahadur</movie></location>
+  <location name="noida"><movie>Shaitaan</movie><movie>Animal</movie></location>
+  <location name="greater noida"><movie>Mission Raniganj</movie><movie>Pathaan</movie></location>
+  <location name="ghaziabad"><movie>Drishyam 2</movie><movie>RRR</movie></location>
+  <location name="faridabad"><movie>Rocky Aur Rani</movie><movie>Jawaan</movie></location>
+  <location name="meerut"><movie>Brahmastra</movie><movie>Uri: The Surgical Strike</movie></location>
+  <location name="alwar"><movie>Bhool Bhulaiyaa 2</movie><movie>Gadar 2</movie></location>
+  <location name="bharatpur"><movie>Chhichhore</movie><movie>Laal Singh Chaddha</movie></location>
+  <location name="panipat"><movie>Panipat</movie><movie>Tanhaji</movie></location>
+  <location name="rohtak"><movie>Kesari</movie><movie>Batla House</movie></location>
+  <location name="sonepat"><movie>Bajrangi Bhaijaan</movie><movie>Satyameva Jayate</movie></location>
+  <location name="jind"><movie>Raazi</movie><movie>Sanju</movie></location>
+  <location name="jhajjar"><movie>Dangal</movie><movie>PK</movie></location>
+  <location name="palwal"><movie>Super 30</movie><movie>Kabir Singh</movie></location>
+  <location name="rewari"><movie>Housefull 4</movie><movie>Kalank</movie></location>
+  <location name="muzaffarnagar"><movie>War</movie><movie>Student of the Year</movie></location>
+  <location name="baghpat"><movie>Ek Tha Tiger</movie><movie>Tiger Zinda Hai</movie></location>
+  <location name="hapur"><movie>Gully Boy</movie><movie>Badhaai Ho</movie></location>
+  <location name="bulandshahr"><movie>Ra.One</movie><movie>Zero</movie></location>
+  <location name="nuh"><movie>Toilet: Ek Prem Katha</movie><movie>Panga</movie></location>
+
+  <!-- Uttar Pradesh -->
+  <location name="lucknow"><movie>Jolly LLB 2</movie><movie>Batla House</movie></location>
+  <location name="kanpur"><movie>Singham</movie><movie>Drishyam</movie></location>
+  <location name="agra"><movie>Rustom</movie><movie>Lootera</movie></location>
+  <location name="varanasi"><movie>Masaan</movie><movie>Kashi</movie></location>
+  <location name="prayagraj"><movie>Mohalla Assi</movie><movie>Shubh Mangal Zyada Saavdhan</movie></location>
+  <location name="uttar pradesh"><movie>Drishyam</movie><movie>Singham</movie></location>
+
+  <!-- Haryana -->
+  <location name="karnal"><movie>Gold</movie><movie>Hawaizaada</movie></location>
+  <location name="kurukshetra"><movie>Sardar Udham</movie><movie>Shershaah</movie></location>
+  <location name="hisar"><movie>Airlift</movie><movie>Gabbar is Back</movie></location>
+  <location name="ambala"><movie>Shaurya</movie><movie>Baby</movie></location>
+  <location name="panchkula"><movie>Neerja</movie><movie>83</movie></location>
+  <location name="haryana"><movie>Dangal</movie><movie>Sultan</movie></location>
+
+  <!-- Rajasthan -->
+  <location name="jaipur"><movie>Paheli</movie><movie>Bajirao Mastani</movie></location>
+  <location name="jodhpur"><movie>Vivah</movie><movie>Mirzya</movie></location>
+  <location name="udaipur"><movie>Yeh Jawaani Hai Deewani</movie><movie>Dhadak</movie></location>
+  <location name="kota"><movie>Kota Factory</movie><movie>Super 30</movie></location>
+  <location name="ajmer"><movie>Ajmer 92</movie><movie>Genius</movie></location>
+  <location name="rajasthan"><movie>Padmaavat</movie><movie>Mirzya</movie></location>
+
+  <!-- Maharashtra -->
+  <location name="maharashtra"><movie>Gully Boy</movie><movie>Mumbai Saga</movie></location>
+
+  <!-- Bihar -->
+  <location name="bihar"><movie>Super 30</movie><movie>Gangaajal</movie></location>
+
+  <!-- Madhya Pradesh -->
+  <location name="madhya pradesh"><movie>Rajneeti</movie><movie>Satyagraha</movie></location>
+
+  <!-- Gujarat -->
+  <location name="gujarat"><movie>Raees</movie><movie>Kai Po Che</movie></location>
+
+  <!-- Punjab -->
+  <location name="punjab"><movie>Udta Punjab</movie><movie>Kesari</movie></location>
+
+  <!-- Himachal Pradesh -->
+  <location name="himachal pradesh"><movie>Shimla Mirchi</movie><movie>Kabir Singh</movie></location>
+
+  <!-- Uttarakhand -->
+  <location name="uttarakhand"><movie>Kedarnath</movie><movie>Batla House</movie></location>
+
+  <!-- West Bengal -->
+  <location name="west bengal"><movie>Kahaani</movie><movie>Detective Byomkesh Bakshy</movie></location>
+
+  <!-- Jharkhand -->
+  <location name="jharkhand"><movie>MS Dhoni: The Untold Story</movie><movie>Gangs of Wasseypur</movie></location>
+
+  <!-- Chhattisgarh -->
+  <location name="chhattisgarh"><movie>Newton</movie><movie>Laal Kaptaan</movie></location>
+
+  <!-- Odisha -->
+  <location name="odisha"><movie>Kalira Atita</movie><movie>Hello Arsi</movie></location>
+
+  <!-- Assam -->
+  <location name="assam"><movie>Village Rockstars</movie><movie>Bulbul Can Sing</movie></location>
+
+  <!-- Nagaland -->
+  <location name="nagaland"><movie>Nana: A Tale of Us</movie><movie>Up Down & Sideways</movie></location>
+
+  <!-- Manipur -->
+  <location name="manipur"><movie>Ishanou</movie><movie>Phijigee Mani</movie></location>
+
+  <!-- Mizoram -->
+  <location name="mizoram"><movie>Kima's Lode Beyond the Class</movie><movie>Khawnlung Run</movie></location>
+
+  <!-- Tripura -->
+  <location name="tripura"><movie>Yarwng</movie><movie>Bwkha</movie></location>
+
+  <!-- Meghalaya -->
+  <location name="meghalaya"><movie>Lorni The Flaneur</movie><movie>Ma.Ama</movie></location>
+
+  <!-- Sikkim -->
+  <location name="sikkim"><movie>Myth</movie><movie>Ralang Road</movie></location>
+
+  <!-- Andhra Pradesh -->
+  <location name="andhra pradesh"><movie>Baahubali</movie><movie>Pushpa</movie></location>
+
+  <!-- Telangana -->
+  <location name="telangana"><movie>RRR</movie><movie>Jersey</movie></location>
+
+  <!-- Tamil Nadu -->
+  <location name="tamil nadu"><movie>Master</movie><movie>Soorarai Pottru</movie></location>
+
+  <!-- Kerala -->
+  <location name="kerala"><movie>Drishyam 2</movie><movie>Jallikattu</movie></location>
+
+  <!-- Karnataka -->
+  <location name="karnataka"><movie>Kantara</movie><movie>K.G.F: Chapter 2</movie></location>
+
+  <!-- Goa -->
+  <location name="goa"><movie>Dear Zindagi</movie><movie>Finding Fanny</movie></location>
+
+  <!-- Andaman and Nicobar Islands -->
+  <location name="andaman and nicobar islands"><movie>Island City</movie><movie>The Forgotten Army</movie></location>
+
+  <!-- Chandigarh -->
+  <location name="chandigarh"><movie>Chandigarh Kare Aashiqui</movie><movie>Shubh Mangal Zyada Saavdhan</movie></location>
+
+  <!-- Dadra and Nagar Haveli and Daman and Diu -->
+  <location name="dadra and nagar haveli and daman and diu"><movie>Angrezi Medium</movie><movie>Bhavesh Joshi Superhero</movie></location>
+
+  <!-- Lakshadweep -->
+  <location name="lakshadweep"><movie>Ocean of Dreams</movie><movie>Island Dreams</movie></location>
+
+  <!-- Puducherry -->
+  <location name="puducherry"><movie>Life of Pi</movie><movie>Angadi Theru</movie></location>
+</preferences>

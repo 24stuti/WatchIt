@@ -9,32 +9,58 @@ const MovieRecommender = () => {
   const [showMovies, setShowMovies] = useState(false);
   const [error, setError] = useState("");
 
-  const NCR_LOCATIONS = [
-    "delhi", "new delhi", "central delhi", "east delhi", "north delhi", "north east delhi",
-    "north west delhi", "south delhi", "south west delhi", "west delhi",
-    "gurugram", "faridabad", "rohtak", "sonepat", "panipat", "jind", "jhajjar", "palwal",
-    "rewari", "mahendragarh", "bhiwani", "nuh", "meerut", "ghaziabad", "noida",
-    "greater noida", "bulandshahr", "baghpat", "hapur", "muzaffarnagar",
-    "alwar", "bharatpur"
-  ];
-
   const containerRef = useRef(null);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const loc = location.toLowerCase().trim();
-    if (NCR_LOCATIONS.includes(loc)) {
-      setMovies(["Article 370", "Crew"]);
-      setShowMovies(true);
-      setError("");
-    } else {
-      setMovies([]);
-      setShowMovies(false);
-      setError("No Movies Recommended for this location");
+  const fetchMoviesFromXML = async (loc) => {
+    try {
+      const res = await fetch("/preferences.xml");
+      const xmlText = await res.text();
+
+      const parser = new DOMParser();
+      const xmlDoc = parser.parseFromString(xmlText, "text/xml");
+
+      const locations = xmlDoc.getElementsByTagName("location");
+      const input = loc.trim().toLowerCase();
+
+      let found = false;
+      for (let i = 0; i < locations.length; i++) {
+        const xmlLoc = locations[i];
+        const locName = xmlLoc.getAttribute("name");
+
+        if (locName && locName.trim().toLowerCase() === input) {
+          const movieNodes = xmlLoc.getElementsByTagName("movie");
+          const movieList = Array.from(movieNodes).map((m) => m.textContent);
+          setMovies(movieList);
+          setShowMovies(true);
+          setError("");
+          found = true;
+          break;
+        }
+      }
+
+      if (!found) {
+        setMovies([]);
+        setShowMovies(false);
+        setError("No Movies Recommended for this location");
+      }
+    } catch (err) {
+      console.error("XML fetch error:", err);
+      setError("Something went wrong. Try again.");
     }
   };
 
-  // Hide input & movies on outside click
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    let loc = location.trim();
+    if (!loc) {
+      loc = window.prompt("Please enter your location:");
+      if (!loc) return;
+      setLocation(loc);
+    }
+    await fetchMoviesFromXML(loc);
+  };
+
+  // Close everything on outside click
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (containerRef.current && !containerRef.current.contains(event.target)) {
@@ -43,7 +69,6 @@ const MovieRecommender = () => {
         setError("");
       }
     };
-
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
